@@ -25,6 +25,8 @@
   --accent-color: #50d8af; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --default-black: #000;
+  --default-yellow: #fcdb03;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -67,13 +69,13 @@ body {
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--default-yellow);
   text-decoration: none;
   transition: 0.3s;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--default-yellow), transparent 25%);
   text-decoration: none;
 }
 
@@ -83,7 +85,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  color: var(--default-black);
   font-family: var(--heading-font);
 }
 
@@ -124,7 +126,7 @@ h6 {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
+  border: 3px solid var(--default-black);
   border-top-color: var(--surface-color);
   animation: php-email-form-loading 1s linear infinite;
 }
@@ -246,7 +248,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: var(--default-black);
     padding: 18px 15px;
     font-size: 15px;
     font-family: var(--nav-font);
@@ -273,7 +275,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: var(--default-yellow);
   }
 
   .navmenu .dropdown ul {
@@ -465,7 +467,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--default-black);
   font-size: 14px;
   text-align: center;
   padding: 30px 0;
@@ -544,7 +546,7 @@ h6 {
   border-radius: 50%;
   width: 60px;
   height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
+  animation: animate-preloader 1s linear infinite;
 }
 
 @keyframes animate-preloader {
@@ -685,7 +687,7 @@ section,
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--accent-color);
+  background: var(--default-yellow);
   left: 0;
   right: 0;
   bottom: 0;
@@ -742,7 +744,7 @@ section,
   display: block;
   width: 80px;
   height: 4px;
-  background: var(--accent-color);
+  background: var(--default-yellow);
   left: 0;
   right: 0;
   bottom: 0;
@@ -761,8 +763,8 @@ section,
 }
 
 .hero .info .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: var(--default-black);
+  background: var(--default-yellow);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 15px;
@@ -911,7 +913,7 @@ section,
   font-size: 36px;
   line-height: 0;
   margin-right: 30px;
-  color: var(--accent-color);
+  color: var(--default-yellow);
 }
 
 .services .service-item .title {
@@ -969,7 +971,7 @@ section,
 }
 
 .clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
+  background-color: var(--default-yellow);
 }
 
 /*--------------------------------------------------------------
@@ -1112,7 +1114,7 @@ section,
 
 .testimonials .testimonial-item .quote-icon-left,
 .testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 50%);
+  color: color-mix(in srgb, var(--default-yellow), transparent 50%);
   font-size: 26px;
   line-height: 0;
 }
@@ -1153,7 +1155,7 @@ section,
 }
 
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
+  background-color: var(--default-yellow);
 }
 
 @media (max-width: 767px) {
@@ -1197,13 +1199,13 @@ section,
 }
 
 .call-to-action h3 {
-  color: var(--default-color);
+  color: var(--default-yellow);
   font-size: 28px;
   font-weight: 700;
 }
 
 .call-to-action p {
-  color: var(--default-color);
+  color: var(--default-yellow);
 }
 
 .call-to-action .cta-btn {
@@ -1216,8 +1218,8 @@ section,
   border-radius: 50px;
   transition: 0.5s;
   margin: 10px;
-  border: 2px solid var(--contrast-color);
-  color: var(--contrast-color);
+  border: 2px solid var(--default-yellow);
+  color: var(--default-yellow);
 }
 
 .call-to-action .cta-btn:hover {
@@ -1553,7 +1555,7 @@ section,
 
 .contact .info-item i {
   color: var(--contrast-color);
-  background: var(--accent-color);
+  background: var(--default-yellow);
   font-size: 20px;
   width: 44px;
   height: 44px;
@@ -1671,12 +1673,12 @@ section,
 .portfolio-details .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+  background-color: color-mix(in srgb, var(--default-yellow), transparent 85%);
   opacity: 1;
 }
 
 .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
+  background-color: var(--default-yellow);
 }
 
 .portfolio-details .portfolio-info h3 {
@@ -1863,6 +1865,3 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
