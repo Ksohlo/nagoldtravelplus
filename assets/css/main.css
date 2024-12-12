@@ -46,6 +46,10 @@
   --surface-color: #ffffff;
 }
 
+.text-yellow{
+  color: var(--accent-color);
+}
+
 .dark-background {
   --background-color: #091e5b;
   --default-color: #ffffff;
@@ -1865,3 +1869,36 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
+
+
+.marquee-container {
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 5px 0;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 20s linear infinite;
+  cursor: pointer;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  font-size: 1.2rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Optional: Pause animation on hover */
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
