@@ -254,7 +254,7 @@ h6 {
   .navmenu a:focus {
     color: var(--default-black);
     padding: 18px 15px;
-    font-size: 15px;
+    font-size: 17px;
     font-family: var(--nav-font);
     font-weight: 500;
     display: flex;
@@ -762,7 +762,8 @@ section,
 }
 
 .hero .info p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--default-black);
+  /* color: color-mix(in srgb, var(--default-color), transparent 20%); */
   font-size: 18px;
 }
 
@@ -813,7 +814,7 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 30%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -879,7 +880,8 @@ section,
 }
 
 .about .content .fst-italic {
-  color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
+  /* color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%); */
+  color:var(--default-black);
 }
 
 .about .content ul {
@@ -890,17 +892,20 @@ section,
 .about .content ul li {
   padding: 10px 0 0 0;
   display: flex;
+  font-size: 0.9rem;
+  color: var(--default-black);
 }
 
 .about .content ul i {
   color: var(--accent-color);
   margin-right: 0.5rem;
   line-height: 1.2;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .about .content p:last-child {
-  margin-bottom: 0;
+  margin-top: 2rem;
+  color: var(--default-black);
 }
 
 /*--------------------------------------------------------------
@@ -1874,7 +1879,7 @@ section,
 .marquee-container {
   width: 100%;
   background-color: #f8f9fa;
-  padding: 5px 0;
+  padding: 3px 0;
 }
 
 .marquee-content {
