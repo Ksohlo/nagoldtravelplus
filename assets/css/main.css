@@ -716,7 +716,7 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 70vh;
+  min-height: calc(100vh - 132.3px);
   position: relative;
   padding: 0;
   display: flex;
@@ -729,20 +729,20 @@ section,
   position: relative;
   inset: 0;
   z-index: 3;
-  padding: 140px 0 60px 0;
+  padding: 80px 0 60px 0;
 }
 
 @media (max-width: 768px),
 (max-height: 480px) {
   .hero .info {
-    padding: 100px 50px 60px 50px;
+    padding: 100px 20px 60px 20px;
   }
 }
 
 .hero .info h2 {
   margin-bottom: 30px;
-  padding-bottom: 30px;
-  font-size: 72px;
+  /* padding-bottom: 30px; */
+  font-size: 6rem;
   font-weight: 700;
   position: relative;
 }
@@ -752,7 +752,7 @@ section,
   text-decoration: underline;
 }
 
-.hero .info h2:after {
+/* .hero .info h2:after {
   content: "";
   position: absolute;
   display: block;
@@ -763,7 +763,7 @@ section,
   right: 0;
   bottom: 0;
   margin: auto;
-}
+} */
 
 @media (max-width: 768px) {
   .hero .info h2 {
@@ -774,7 +774,7 @@ section,
 .hero .info p {
   color: var(--default-black);
   /* color: color-mix(in srgb, var(--default-color), transparent 20%); */
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -828,7 +828,7 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 60%);
+  background-image: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0.138));
   position: absolute;
   inset: 0;
   z-index: 2;
