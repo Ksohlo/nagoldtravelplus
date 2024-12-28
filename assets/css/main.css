@@ -23,8 +23,10 @@
   --default-color: #555555; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0c2e8a; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #fcdb03; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-gold: #bdaf52; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  /* --default-black: #000; */
   --default-black: #000;
   --default-yellow: #fcdb03;
 }
@@ -673,7 +675,7 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  padding-bottom: 20px;
   position: relative;
 }
 
@@ -699,6 +701,14 @@ section,
 
 .section-title p {
   margin-bottom: 0;
+}
+
+.dark{
+  background: var(--default-black);
+}
+
+.dark-text{
+  color: var(--default-black);
 }
 
 /*--------------------------------------------------------------
@@ -765,6 +775,7 @@ section,
   color: var(--default-black);
   /* color: color-mix(in srgb, var(--default-color), transparent 20%); */
   font-size: 18px;
+  font-weight: 400;
 }
 
 .hero .info .btn-get-started {
@@ -780,10 +791,13 @@ section,
   transition: 0.5s;
   margin: 10px;
 }
+.bold{
+  font-weight: 600 !important;
+}
 
 .hero .info .btn-get-started:hover {
   background: var(--surface-color);
-  color: var(--accent-color);
+  color: var(--default-color);
 }
 
 .hero .carousel {
@@ -814,7 +828,7 @@ section,
 
 .hero .carousel-item::before {
   content: "";
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  background-color: color-mix(in srgb, var(--background-color), transparent 60%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -1813,6 +1827,14 @@ section,
   padding: 10px 30px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   margin-bottom: 20px;
+  display: block;
+}
+
+@media (max-width: 360px) {
+  .service-details .services-list{
+    display: none;
+  }
+  
 }
 
 .service-details .services-list a {
@@ -1906,4 +1928,162 @@ section,
 /* Optional: Pause animation on hover */
 .marquee-container:hover .marquee-content {
   animation-play-state: paused;
+}
+
+
+/* _____________________________________
+New section 
+_____________________________________ */
+.nservices-area {
+  background: #f7f7f7;
+}
+
+.nsection-padding3 {
+  /* padding-top: 50px; */
+  padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 889, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
+  .nsection-padding3 {
+    padding-top: 195px;
+    padding-bottom: 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 889, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
+  .nsection-padding3 {
+    padding-top: 95px;
+    padding-bottom: 0px;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  /* line 889, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
+  .nsection-padding3 {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 575px) {
+  /* line 889, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_common.scss */
+  .nsection-padding3 {
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  /* line 3, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+  .nservices-area .nsingle-services {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  /* line 3, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+  .nservices-area .nsingle-services {
+    margin-bottom: 30px;
+  }
+}
+
+/* line 11, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+.nservices-area .nsingle-services .nservices-img img {
+  width: 100%;
+}
+
+/* line 15, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+.nservices-area .nsingle-services .nservices-caption {
+  position: relative;
+  background: #fff;
+  width: 80%;
+  padding: 33px 46px 16px 32px;
+  margin-top: -50px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 15, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+  .nservices-area .nsingle-services .nservices-caption {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  /* line 15, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+  .nservices-area .nsingle-services .nservices-caption {
+    width: 100%;
+    padding: 33px 16px 16px 26px;
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 575px) {
+  /* line 15, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+  .nservices-area .nsingle-services .nservices-caption {
+    width: 100%;
+    padding: 20px 16px 16px 26px;
+    margin-top: 0px;
+  }
+}
+
+/* line 34, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+.nservices-area .nsingle-services .nservices-caption span {
+  margin-bottom: 15px;
+  line-height: 18px;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  color: var(--accent-gold);
+  font-weight: 600;
+  font-size: 20px;
+  display: block;
+  padding-left: 60px;
+}
+
+/* line 44, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+.nservices-area .nsingle-services .nservices-caption span::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent-gold);
+}
+
+/* line 56, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+.nservices-area .nsingle-services .nservices-caption p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* line 60, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+.nservices-area .nsingle-services .nservices-caption p a {
+  color: #0e132a;
+  font-weight: 300;
+  font-size: 13px;
+  display: block;
+}
+
+/* line 65, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+.nservices-area .nsingle-services .nservices-caption p a:hover {
+  color: #14435c;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  /* line 60, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+  .nservices-area .nsingle-services .nservices-caption p a {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  /* line 60, C:/Users/HP/Desktop/264.Business_HTML/HTML/assets/scss/_services_section.scss */
+  .nservices-area .nsingle-services .nservices-caption p a {
+    font-size: 18px;
+  }
 }
