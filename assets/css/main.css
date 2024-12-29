@@ -1999,7 +1999,8 @@ _____________________________________ */
   position: relative;
   background: #fff;
   width: 80%;
-  padding: 33px 46px 16px 32px;
+  height: 175px;
+  padding: 20px 20px 16px 20px;
   margin-top: -50px;
 }
 
